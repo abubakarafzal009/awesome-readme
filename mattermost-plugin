@@ -1,0 +1,28 @@
+MatterMost ScreenShoot Plugin
+Root Component:
+Path : Component/root/Root.jsx
+All Dom functionalities are coded in there. Eg Modal to show for image cropping.
+Main Functions: 
+<Cropper></Cropper> element to show image cropper
+_crop() function to return cropped image base64 by binding with <Cropper></Cropper> element.
+onSend() function to send data to recording.js file function for channel attachment.
+Channel Attachment : 
+File Path: client/client.js
+Main Functions:
+uploadRecording() function to send data to active channel.
+b64toBlob() function used to convert base64 image to blob with .jpeg extension
+Check Wether Browser Supported or Not:
+File Path: client/isRecordingSupported.js
+Function: isRecordingSupported()
+Taking ScreenShoot:
+
+Path:client/recorder.js
+Main Functions:
+Start() function to start recording of screen.
+Stop () function to stop recording of screen and create a base64 of current chunk of video at the same instance.
+Main Class:
+Main class is ScreenRecorder to export.
+Plugin Registration:
+Index.js file is used for plugin registration.
+Menifest.js: This file is to give unique id to each DOM element related to plugin and to give  an id to plugin as well.
+Plugin.jsx:This file is used for plugin initialize Function and to register components
